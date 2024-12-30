@@ -1,17 +1,14 @@
 import streamlit as st
-from g1 import generate_response
+# from g1 import generate_response
+from zhipu import generate_response
 import json
 
 def main():
-    st.set_page_config(page_title="g1 prototype", page_icon="🧠", layout="wide")
+    st.set_page_config(page_title="GLM思维链", page_icon="🧠", layout="wide")
     
-    st.title("g1: Using Llama-3.1 70b on Groq to create o1-like reasoning chains")
+    st.title("远洋船舶管家-玛丽")
     
-    st.markdown("""
-    This is an early prototype of using prompting to create o1-like reasoning chains to improve output accuracy. It is not perfect and accuracy has yet to be formally evaluated. It is powered by Groq so that the reasoning step is fast!
-                
-    Open source [repository here](https://github.com/bklieger-groq)
-    """)
+    st.markdown("""GLM远洋船舶AI助手""")
     
     # Text input for user query
     user_query = st.text_input("Enter your query:", placeholder="e.g., How many 'R's are in the word strawberry?")
